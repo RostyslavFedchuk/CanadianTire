@@ -33,10 +33,16 @@ public class SearchPageBO extends GeneralBO {
 
     @Step("Perform global search with '{searchKeyword}' keyword")
     public SearchPageBO performGlobalSearch(String searchKeyword) {
-        String expectedSearchingTitle = SEARCHING_RESULTS_TITLE.formatted(searchKeyword);
-        String actualSearchingTitle = headerPanel
+        headerPanel
                 .fillGlobalSearchInput(searchKeyword)
-                .submitGlobalSearch()
+                .submitGlobalSearch();
+        return this;
+    }
+
+    @Step("Verify that global search is performed with '{searchKeyword}' keyword")
+    public SearchPageBO verifyGlobalSearchPerformed(String searchKeyword) {
+        String expectedSearchingTitle = SEARCHING_RESULTS_TITLE.formatted(searchKeyword);
+        String actualSearchingTitle = searchPage
                 .getSearchingResultsTitle();
         assertThat(actualSearchingTitle)
                 .as("Searching title is not as expected")

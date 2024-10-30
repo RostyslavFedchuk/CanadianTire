@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-import static org.canadian.tire.util.Validator.*;
+import static org.canadian.tire.api.validator.UserValidatorManager.*;
 
 public class UsersSteps {
 

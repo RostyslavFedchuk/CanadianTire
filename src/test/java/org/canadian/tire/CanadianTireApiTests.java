@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.canadian.tire.api.data.UserModels.getNewUserModel;
 import static org.canadian.tire.api.data.UserModels.getUpdatedUserModel;
-import static org.canadian.tire.util.Validator.*;
+import static org.canadian.tire.api.validator.UserValidatorManager.*;
 
 @SpringBootTest
 @ContextConfiguration(classes = {SpringConfig.class})

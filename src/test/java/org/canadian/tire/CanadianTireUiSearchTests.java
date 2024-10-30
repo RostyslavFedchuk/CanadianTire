@@ -38,6 +38,7 @@ public class CanadianTireUiSearchTests extends AbstractTestNGSpringContextTests 
         searchPageBO
                 .verifyHomePageOpened()
                 .performGlobalSearch(tireModel.getSearchKeyword())
+                .verifyGlobalSearchPerformed(tireModel.getSearchKeyword())
                 .verifySearchedItemFound(tireModel.getName())
                 .openSearchedItem(tireModel.getName())
                 .selectTireSize(tireModel)

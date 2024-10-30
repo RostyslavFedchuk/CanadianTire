@@ -34,6 +34,7 @@ public class SearchPageSteps {
         TireModel tireModel = CucumberUtil.convertToTireModel(data);
         searchPageBO
                 .performGlobalSearch(tireModel.getSearchKeyword())
+                .verifyGlobalSearchPerformed(tireModel.getSearchKeyword())
                 .verifySearchedItemFound(tireModel.getName())
                 .openSearchedItem(tireModel.getName())
                 .selectTireSize(tireModel);

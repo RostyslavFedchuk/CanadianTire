@@ -1,4 +1,4 @@
-package org.canadian.tire.util;
+package org.canadian.tire.api.validator;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -9,7 +9,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class Validator {
+public final class UserValidatorManager {
 
     public static void verifyUsersEquality(User originalUser, User userToCompare, String errorMessage) {
         assertThat(originalUser)
