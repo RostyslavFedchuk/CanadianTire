@@ -1,0 +1,5 @@
+spring:
+
+app:
+  base-url: // your application url
+  # Extra application configuration details
